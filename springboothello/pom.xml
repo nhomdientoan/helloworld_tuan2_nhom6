@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>qlam</groupId>
+  <artifactId>springboothello</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-parent</artifactId>
+  	<version>1.4.1.RELEASE</version>
+  </parent>
+  <properties>
+  	<java.version>1.8</java.version>
+  </properties>
+  
+  <dependencies>
+
+ 
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>  	
+    </dependency>
+  </dependencies>
+ 
+  <build>
+    <finalName>springboothello</finalName>
+     <plugins>
+		<plugin>
+              <groupId>com.google.appengine</groupId>
+              <artifactId>gcloud-maven-plugin</artifactId>
+              <version>${gcloud.plugin.version}</version>
+              <configuration>
+                <set_default>true</set_default>
+              </configuration>
+            </plugin>
+     </plugins>
+  </build>
+</project>
